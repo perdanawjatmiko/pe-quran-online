@@ -4,8 +4,8 @@ const NavData = [
         url: "/"
     },
     {
-        name: "Surat",
-        url: "/"
+        name: "Jadwal Sholat",
+        url: "/jadwal-sholat"
     },
     {
         name: "Tentang Saya",
