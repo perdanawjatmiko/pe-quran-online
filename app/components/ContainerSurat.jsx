@@ -10,7 +10,6 @@ const [asd, setAsd] = useState([])
 const [detail, setDetail] = useState(1)
 
   useEffect(() => {
-    console.log('Fetching data...');
     const fetchData = async () => {
       try {
         const response = await axios.get('https://equran.id/api/v2/surat');

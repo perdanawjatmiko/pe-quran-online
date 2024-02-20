@@ -23,7 +23,6 @@ const DetailSurat = ({nomorSurat}) => {
     suratSebelumnya: false
   })
   useEffect(() => {
-    console.log('Fetching data...');
     const fetchData = async () => {
       try {
         const response = await axios.get('https://equran.id/api/v2/surat/'+ nomorSurat);
@@ -57,7 +56,6 @@ const DetailSurat = ({nomorSurat}) => {
         </div>
       </div>
       <div className="flex flex-col justify-start gap-2 overflow-y-auto">
-        {console.log(detailSurat.ayat)}
         {detailSurat.ayat.length > 0 ? 
         (detailSurat.ayat.map((ayat, i) => (
           <DetailAyat key={i} nomorAyat={ayat.nomorAyat} teksLatin={ayat.teksLatin} teksArab={ayat.teksArab} teksIndonesia={ayat.teksIndonesia} />

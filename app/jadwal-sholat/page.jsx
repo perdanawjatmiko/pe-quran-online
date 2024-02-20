@@ -46,10 +46,10 @@ const Page = () => {
   }
 
   return (
-    <main className="bg-lime-100 min-h-screen px-4 md:px-[20%]">
+    <main className="bg-lime-100 min-h-screen px-4 lg:px-[10%] xl:px-[20%]">
       <div className="pt-32 flex flex-col">
         <h1 className="text-xl md:text-3xl text-center text-primary-800 font-bold mb-8 w-full bg-white py-4">
-          Jadwal Sholat <br /> Bulan {bulan[bulanSekarang]} 2024 di <br /> {lokasiNow}
+          Jadwal Sholat <br /> Bulan {bulan[bulanSekarang]} 2024 di <br /> {lokasiNow} dan Sekitarnya
         </h1>
         <div className="my-4">
         <form className="max-w-sm mx-auto">
@@ -62,28 +62,28 @@ const Page = () => {
         </form>
         </div>
         <div className="relative overflow-x-auto mb-16">
-          <table className="text-sm rtl:text-right text-gray-500 dark:text-gray-400 w-full">
+          <table className="text-[10px] md:text-sm text-gray-500 dark:text-gray-400 w-full">
             <thead className="text-white uppercase bg-primary-600 border-b-4 border-b-yellow-500 dark:bg-gray-700 dark:text-gray-400 text-center">
               <tr className="overflow-auto">
-                <th scope="col" className="px-6 py-3 text-left">
+                <th scope="col" className="px-2 py-3">
                   Hari Tanggal
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-2 py-3">
                   Imsak
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-2 py-3">
                   Subuh
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-2 py-3">
                   Dzuhur
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-2 py-3">
                   Ashar
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-2 py-3">
                   Maghrib
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-2 py-3">
                   Isya
                 </th>
               </tr>
