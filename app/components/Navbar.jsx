@@ -69,6 +69,7 @@ const Navbar = () => {
               <Link
                 href={nav.url}
                 className="block py-2 pl-3 pr-4 text-gray-200 text-xl sm:text-2xl rounded md:p-0 hover:text-white"
+                onClick={() => setNavOpen(!navOpen)}
               >
                 {nav.name}
               </Link>
