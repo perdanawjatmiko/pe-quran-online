@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DetailAyat from "./DetailAyat";
+import AudioPlay from "./AudioPlay";
 
 const DetailSurat = ({nomorSurat}) => {
   const [detailSurat, setDetailSurat] = useState({
@@ -41,24 +42,19 @@ const DetailSurat = ({nomorSurat}) => {
         <div className="flex items-center justify-between pb-12">
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl font-bold text-white">
-              {detailSurat.namaLatin} - {detailSurat.nama}
+              {`${nomorSurat}. ${detailSurat.namaLatin} - ${detailSurat.nama}`}
             </h1>
-            <span className="text-white text-sm font-semibold">
+            <span className="text-white text-sm md:text-base font-semibold">
               {detailSurat.arti} - {detailSurat.jumlahAyat} ayat -{" "}
               {detailSurat.tempatTurun}
             </span>
-          </div>
-          <div className="">
-            <div className="text-xl text-white px-4 py-2 border border-white rounded-full">
-              {nomorSurat}
-            </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col justify-start gap-2 overflow-y-auto">
         {detailSurat.ayat.length > 0 ? 
         (detailSurat.ayat.map((ayat, i) => (
-          <DetailAyat key={i} nomorAyat={ayat.nomorAyat} teksLatin={ayat.teksLatin} teksArab={ayat.teksArab} teksIndonesia={ayat.teksIndonesia} />
+          <DetailAyat key={i} nomorAyat={ayat.nomorAyat} teksLatin={ayat.teksLatin} teksArab={ayat.teksArab} teksIndonesia={ayat.teksIndonesia} audio={ayat.audio['01']} />
         )))
       : (
         <p>Loading...</p>
